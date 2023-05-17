@@ -14,6 +14,7 @@
 		58ECF7322A153AE70070DA6C /* ColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58ECF7302A153AE70070DA6C /* ColeccionDeJuegos.xcdatamodeld */; };
 		58ECF7342A153AEB0070DA6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ECF7332A153AEB0070DA6C /* Assets.xcassets */; };
 		58ECF7372A153AEB0070DA6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58ECF7352A153AEB0070DA6C /* LaunchScreen.storyboard */; };
+		58ECF73F2A1542690070DA6C /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ECF73E2A1542690070DA6C /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		58ECF7332A153AEB0070DA6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58ECF7362A153AEB0070DA6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58ECF7382A153AEB0070DA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58ECF73E2A1542690070DA6C /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				58ECF7352A153AEB0070DA6C /* LaunchScreen.storyboard */,
 				58ECF7382A153AEB0070DA6C /* Info.plist */,
 				58ECF7302A153AE70070DA6C /* ColeccionDeJuegos.xcdatamodeld */,
+				58ECF73E2A1542690070DA6C /* JuegosViewController.swift */,
 			);
 			path = ColeccionDeJuegos;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58ECF73F2A1542690070DA6C /* JuegosViewController.swift in Sources */,
 				58ECF72C2A153AE70070DA6C /* ViewController.swift in Sources */,
 				58ECF7282A153AE70070DA6C /* AppDelegate.swift in Sources */,
 				58ECF72A2A153AE70070DA6C /* SceneDelegate.swift in Sources */,
