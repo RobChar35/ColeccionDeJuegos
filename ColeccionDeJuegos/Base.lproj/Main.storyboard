@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="rV5-Fv-ugt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m7f-5I-fl3">
                             <connections>
-                                <segue destination="Xqe-Bu-tXq" kind="show" id="k8J-eS-tUr"/>
+                                <segue destination="Xqe-Bu-tXq" kind="show" identifier="juegoSegue" id="k8J-eS-tUr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -65,12 +65,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Descripcion" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXD-H1-eI0">
+                                <rect key="frame" x="67" y="344" width="280" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bT-yw-qL8">
+                                <rect key="frame" x="47" y="398" width="320" height="216"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSf-KS-nr5">
-                                <rect key="frame" x="169.5" y="344" width="75.5" height="31"/>
+                                <rect key="frame" x="169.5" y="634" width="75.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarTapped:" destination="Xqe-Bu-tXq" eventType="touchUpInside" id="zye-Ps-IA3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-dD-bgv">
+                                <rect key="frame" x="169.5" y="680" width="75.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="Xqe-Bu-tXq" eventType="touchUpInside" id="RhN-YD-OIl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,12 +94,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JSf-KS-nr5" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="4tC-LC-HM9"/>
-                            <constraint firstItem="JSf-KS-nr5" firstAttribute="top" secondItem="9W9-hN-WKU" secondAttribute="bottom" constant="20" id="9hi-34-RpA"/>
+                            <constraint firstItem="kWL-dD-bgv" firstAttribute="top" secondItem="JSf-KS-nr5" secondAttribute="bottom" constant="15" id="55k-WL-s2F"/>
+                            <constraint firstItem="kWL-dD-bgv" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="5OC-Cb-NXa"/>
+                            <constraint firstItem="9W9-hN-WKU" firstAttribute="width" secondItem="oXD-H1-eI0" secondAttribute="width" id="C92-Xi-5xM"/>
+                            <constraint firstItem="8bT-yw-qL8" firstAttribute="top" secondItem="oXD-H1-eI0" secondAttribute="bottom" constant="20" id="JKa-o7-I3F"/>
                             <constraint firstItem="9W9-hN-WKU" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="Oax-Ac-quS"/>
+                            <constraint firstItem="JSf-KS-nr5" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="Q1x-xd-S5N"/>
                             <constraint firstItem="9W9-hN-WKU" firstAttribute="width" secondItem="qhR-WD-fQv" secondAttribute="width" id="QjR-LM-3r9"/>
                             <constraint firstItem="9W9-hN-WKU" firstAttribute="top" secondItem="qhR-WD-fQv" secondAttribute="bottom" constant="20" id="dBo-DJ-3xN"/>
+                            <constraint firstItem="8bT-yw-qL8" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="dT2-7y-buV"/>
+                            <constraint firstItem="oXD-H1-eI0" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="j0Q-H3-nyn"/>
                             <constraint firstItem="qhR-WD-fQv" firstAttribute="centerX" secondItem="cAj-Vg-L5q" secondAttribute="centerX" id="lBy-x7-eP1"/>
+                            <constraint firstItem="JSf-KS-nr5" firstAttribute="top" secondItem="8bT-yw-qL8" secondAttribute="bottom" constant="20" id="m3v-kK-5Sd"/>
                             <constraint firstItem="qhR-WD-fQv" firstAttribute="top" secondItem="JHr-M5-HMP" secondAttribute="top" constant="32" id="pu1-kf-qAQ"/>
+                            <constraint firstItem="oXD-H1-eI0" firstAttribute="top" secondItem="9W9-hN-WKU" secondAttribute="bottom" constant="20" id="t9z-b8-PJj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8ky-s0-fcZ">
@@ -101,6 +125,10 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="agregarActualizarBoton" destination="JSf-KS-nr5" id="up5-Nk-TW1"/>
+                        <outlet property="categoriaPickerView" destination="8bT-yw-qL8" id="iaJ-ga-jex"/>
+                        <outlet property="descripcionTextField" destination="oXD-H1-eI0" id="zWk-ma-BSi"/>
+                        <outlet property="eliminarBoton" destination="kWL-dD-bgv" id="jnK-Fj-BOO"/>
                         <outlet property="imageView" destination="qhR-WD-fQv" id="tWH-gP-mNu"/>
                         <outlet property="tituloTextField" destination="9W9-hN-WKU" id="keY-rI-NAT"/>
                     </connections>
